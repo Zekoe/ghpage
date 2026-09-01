@@ -10,6 +10,7 @@ collection: "Projects"
 <meta name="description" content="Dive into the Danube Riverbed — an interactive audiovisual installation by Jacob Bartmann and Zekő Sebesy.">
 <title>Dive into the Danube Riverbed — Zekő Sebesy</title>
 <link rel="stylesheet" href="/ghpage/css/projects-d9adb8aba1cd5b6bbc34a4a4626628d84e82122a40156d9daa9fe03c5fd397c0.css" />
+<link rel="stylesheet" href="/ghpage/css/navigation.css" />
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,italic&display=swap" rel="stylesheet">
@@ -19,7 +20,14 @@ collection: "Projects"
     <header class="main_header">
         <a class="site-name" href="/ghpage/">Zekő Sebesy</a>
         <nav>
-            <a href="/ghpage/projects.html" class="active">Projects</a>
+            <details class="projects-menu">
+                <summary class="active">Projects</summary>
+                <div class="projects-menu__dropdown">
+                    <a href="/ghpage/projects.html#conductor">Conductor</a>
+                    <a href="/ghpage/projects.html#composer">Composer</a>
+                    <a href="/ghpage/projects.html#trumpet-player">Trumpet player</a>
+                </div>
+            </details>
             <a href="/ghpage/bio.html">Bio</a>
             <a href="/ghpage/contact.html">Contact</a>
         </nav>
