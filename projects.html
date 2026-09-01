@@ -10,6 +10,7 @@ collection: "Projects"
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Zekő Sebesy</title>
 <link rel="stylesheet" href="/ghpage/css/projects-d9adb8aba1cd5b6bbc34a4a4626628d84e82122a40156d9daa9fe03c5fd397c0.css" />
+<link rel="stylesheet" href="/ghpage/css/navigation.css" />
 
 <link href="https://fonts.googleapis.com" rel="preconnect" ><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin ><link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,italic&display=swap" rel="stylesheet" ></head>
 
@@ -17,7 +18,14 @@ collection: "Projects"
     <HEADER id="imtiz-2-3-2" class="main_header">
         <A href="/ghpage/" id="ie4rk-2-3-2">Zekő Sebesy</A>
         <NAV id="iae2i-2-3-2">
-            <A id="itit3-2-3-2" href="/ghpage/projects.html" style="font-weight: bold; text-decoration: underline;">Projects</A>
+            <details class="projects-menu">
+                <summary class="active">Projects</summary>
+                <div class="projects-menu__dropdown">
+                    <a href="/ghpage/projects.html#conductor">Conductor</a>
+                    <a href="/ghpage/projects.html#composer">Composer</a>
+                    <a href="/ghpage/projects.html#trumpet-player">Trumpet player</a>
+                </div>
+            </details>
             <A id="it5y5-2-3-2" href="/ghpage/bio.html">Bio</A>
             <A id="if4hi-2-3-2" href="/ghpage/contact.html" class="link">Contact</A>
         </NAV>
@@ -26,7 +34,7 @@ collection: "Projects"
     <main class="projects">
         <h1>Projects</h1>
 
-        <a class="project-card" href="/ghpage/dive-into-the-danube-riverbed.html">
+        <a class="project-card" id="composer" href="/ghpage/dive-into-the-danube-riverbed.html">
             <img src="/ghpage/assets/AE_Bild_Licht.png" alt="Illustration of the interactive water and light installation">
             <div class="project-card__text">
                 <p class="project-card__year">2025 · Interactive installation</p>
