@@ -254,6 +254,13 @@ a {
   line-height: 0.98;
 }
 
+.project-translation {
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.2;
+}
+
 .project-credit {
   margin: 2rem 0 0;
 }
