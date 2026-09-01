@@ -81,7 +81,13 @@ a {
   margin: 8vh auto 0;
 }
 
-.composer-page h1 {
+.conductor-page {
+  width: min(1000px, 90%);
+  margin: 8vh auto 0;
+}
+
+.composer-page h1,
+.conductor-page h1 {
   margin: 0 0 3rem;
   font-size: clamp(2.4rem, 7vw, 5.8rem);
   font-weight: 400;
@@ -127,6 +133,35 @@ a {
 
 .project-list__year {
   font-size: 0.9rem;
+}
+
+.conducting-project {
+  padding: 0 0 4rem;
+}
+
+.conducting-project + .conducting-project {
+  padding-top: 4rem;
+  border-top: 1px solid #000;
+}
+
+.conducting-project__meta {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.conducting-project h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+  background: #000;
 }
 
 .project-card {
@@ -235,7 +270,8 @@ footer {
 
   .projects,
   .project-detail,
-  .composer-page {
+  .composer-page,
+  .conductor-page {
     margin-top: 5vh;
   }
 
