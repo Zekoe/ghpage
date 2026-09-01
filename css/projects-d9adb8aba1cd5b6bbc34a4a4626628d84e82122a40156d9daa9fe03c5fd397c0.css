@@ -176,6 +176,24 @@ a {
   background: #000;
 }
 
+.project-media {
+  max-width: 1000px;
+  margin: 5rem 0;
+}
+
+.project-media h2 {
+  margin: 0 0 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-resource {
+  margin: 3rem 0 0;
+  font-size: 0.95rem;
+}
+
 .project-card {
   max-width: 900px;
   display: grid;
