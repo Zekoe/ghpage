@@ -1,1 +1,182 @@
-* { box-sizing: border-box; } body {margin: 0;}.main_header{display:flex;font-family:Helvetica, sans-serif;font-size:18px;}.link:link{font-size:18px;}#ie4rk-2-3-2-2{padding:10px 10px 10px 5%;display:flex;}#ie4rk-2-3-2-2{padding:10px 10px 10px 5%;display:flex;}#ie4rk-2-3-2-2:link{transition:unset;transform:unset;color:#000000;font-family:Helvetica, sans-serif;font-size:18px;}#itit3-2-3-2-2{padding:10px;font-family:Helvetica, sans-serif;}#itit3-2-3-2-2{padding:10px;}#itit3-2-3-2-2:link{color:#000000;font-family:Helvetica, sans-serif;font-size:18px;}#it5y5-2-3-2-2{padding:10px;}#it5y5-2-3-2-2{padding:10px;}#it5y5-2-3-2-2:link{color:#000000;font-family:Helvetica, sans-serif;font-size:18px;}#if4hi-2-3-2-2{padding:10px;}#if4hi-2-3-2-2{padding:10px;}#if4hi-2-3-2-2:link{font-family:Helvetica, sans-serif;color:#000000;}#iae2i-2-3-2-2{min-height:100px;display:flex;justify-content:space-evenly;width:40%;align-items:center;}#iae2i-2-3-2-2{min-height:100px;display:flex;justify-content:space-evenly;width:40%;align-items:center;}#imtiz-2-3-2-2{min-height:100px;display:flex;justify-content:space-between;align-items:center;}#imtiz-2-3-2-2{min-height:100px;display:flex;justify-content:space-between;align-items:center;}#ij3lh{min-height:100px;}#iwbrv{padding:10px;}#ihf7e{color:black;}#iympm{width:100%;font-family:Helvetica, sans-serif;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #000;
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.main_header {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.main_header > a,
+#ie4rk-2-3-2 {
+  padding: 10px 10px 10px 5%;
+}
+
+.main_header nav,
+#iae2i-2-3-2 {
+  width: 40%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main_header nav a,
+#iae2i-2-3-2 a {
+  padding: 10px;
+}
+
+.main_header .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.projects,
+.project-detail {
+  width: min(1100px, 90%);
+  margin: 8vh auto 0;
+}
+
+.projects > h1 {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+}
+
+.project-card {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: minmax(240px, 42%) 1fr;
+  gap: 2rem;
+  align-items: center;
+  text-decoration: none;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.project-card h2 {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.project-card__year,
+.project-meta {
+  margin: 0 0 0.6rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-card__text > p:last-child {
+  max-width: 38rem;
+  margin: 0;
+}
+
+.project-card:hover h2,
+.project-card:focus-visible h2,
+.back-link:hover,
+.back-link:focus-visible {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 4rem;
+  font-size: 0.9rem;
+}
+
+.project-heading {
+  max-width: 900px;
+}
+
+.project-heading h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.project-credit {
+  margin: 2rem 0 0;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 5rem 0;
+  display: block;
+}
+
+.project-copy {
+  max-width: 720px;
+  font-size: 1.08rem;
+}
+
+.project-copy p {
+  margin: 0 0 1.4rem;
+}
+
+footer {
+  width: 90%;
+  min-height: 100px;
+  margin: 12vh auto 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 10px;
+}
+
+@media (max-width: 700px) {
+  .main_header {
+    align-items: flex-start;
+  }
+
+  .main_header nav,
+  #iae2i-2-3-2 {
+    width: auto;
+    min-height: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .projects,
+  .project-detail {
+    margin-top: 5vh;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .back-link {
+    margin-bottom: 2.5rem;
+  }
+
+  .project-image {
+    margin: 3rem 0;
+  }
+}
