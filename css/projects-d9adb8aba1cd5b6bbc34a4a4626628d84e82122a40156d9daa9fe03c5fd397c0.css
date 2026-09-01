@@ -82,7 +82,7 @@ a {
 }
 
 .conductor-page {
-  width: min(1000px, 90%);
+  width: min(1100px, 90%);
   margin: 8vh auto 0;
 }
 
@@ -158,6 +158,7 @@ a {
 
 .video-embed {
   width: 100%;
+  max-width: 1000px;
   aspect-ratio: 16 / 9;
   display: block;
   border: 0;
