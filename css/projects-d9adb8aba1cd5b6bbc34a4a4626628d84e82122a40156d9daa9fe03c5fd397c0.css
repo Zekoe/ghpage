@@ -58,6 +58,73 @@ a {
   font-size: 1.5rem;
 }
 
+.category-list {
+  max-width: 720px;
+  border-top: 1px solid #000;
+}
+
+.category-list a {
+  display: block;
+  padding: 1rem 0;
+  border-bottom: 1px solid #000;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  text-decoration: none;
+}
+
+.category-list a:hover,
+.category-list a:focus-visible {
+  text-decoration: underline;
+}
+
+.composer-page {
+  width: min(900px, 90%);
+  margin: 8vh auto 0;
+}
+
+.composer-page h1 {
+  margin: 0 0 3rem;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.project-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #000;
+  list-style: none;
+}
+
+.project-list li,
+.project-list a {
+  color: #000;
+}
+
+.project-list li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #000;
+}
+
+.project-list a {
+  font-size: clamp(1.35rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.project-list a:hover,
+.project-list a:focus-visible {
+  text-decoration: underline;
+}
+
+.project-list__year {
+  font-size: 0.9rem;
+}
+
 .project-card {
   max-width: 900px;
   display: grid;
@@ -163,8 +230,14 @@ footer {
   }
 
   .projects,
-  .project-detail {
+  .project-detail,
+  .composer-page {
     margin-top: 5vh;
+  }
+
+  .project-list li {
+    grid-template-columns: 4rem 1fr;
+    gap: 0.75rem;
   }
 
   .project-card {
