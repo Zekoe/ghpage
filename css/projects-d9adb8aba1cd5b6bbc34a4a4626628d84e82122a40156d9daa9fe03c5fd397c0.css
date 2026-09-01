@@ -95,6 +95,17 @@ a {
   line-height: 0.98;
 }
 
+.composer-page h1 {
+  margin-bottom: 0.55rem;
+}
+
+.composer-page__label {
+  margin: 0 0 3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .project-list {
   margin: 0;
   padding: 0;
