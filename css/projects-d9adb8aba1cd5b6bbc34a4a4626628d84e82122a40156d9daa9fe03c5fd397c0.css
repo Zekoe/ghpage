@@ -110,9 +110,13 @@ a {
   border-bottom: 1px solid #000;
 }
 
-.project-list a {
+.project-list a,
+.project-list li > span:not(.project-list__year) {
   font-size: clamp(1.35rem, 3vw, 2.4rem);
   line-height: 1.15;
+}
+
+.project-list a {
   text-decoration: none;
 }
 
