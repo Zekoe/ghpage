@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website layout preview — Zekő Sebesy</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { color: #000; background: #fff; font-family: Helvetica, Arial, sans-serif; }
+    body { min-height: 100vh; margin: 0; font-size: 16px; line-height: 1.6; }
+    a, a:link, a:visited { color: #000; }
+    .main-header { min-height: 100px; display: flex; align-items: center; justify-content: space-between; }
+    .site-name { padding: 10px 10px 10px 5%; font-size: 18px; }
+    nav { width: 40%; min-height: 100px; display: flex; align-items: center; justify-content: space-evenly; font-size: 18px; }
+    nav > a, .projects-menu summary { padding: 10px; }
+    nav a { text-decoration: underline; }
+    nav a[aria-current="page"] { font-weight: 700; }
+    .projects-menu { position: relative; }
+    .projects-menu summary { cursor: pointer; list-style: none; white-space: nowrap; }
+    .projects-menu summary::-webkit-details-marker { display: none; }
+    .projects-menu summary::after { content: "↓"; display: inline-block; margin-left: .35rem; font-size: .75em; }
+    .projects-menu[open] summary::after { transform: rotate(180deg); }
+    .projects-menu__dropdown { position: absolute; z-index: 20; top: calc(100% - 2px); left: 50%; min-width: 180px; padding: .45rem 0; border: 1px solid #000; background: #fff; transform: translateX(-50%); }
+    .projects-menu__dropdown a { display: block; padding: .55rem .85rem; font-size: 16px; text-decoration: none; white-space: nowrap; }
+    .projects-menu__dropdown a:hover, .projects-menu__dropdown a:focus-visible { color: #fff; background: #000; outline: none; }
+    main { width: min(1100px, 90%); margin: 5vh auto 0; }
+    .view[hidden] { display: none; }
+    .home-photo { width: min(760px, 72%); display: block; }
+    .roles { margin: 1rem 0 .25rem; font-size: 1rem; letter-spacing: .01em; }
+    .photo-credit { margin: 0; font-size: 10px; }
+    .text-page { max-width: 800px; }
+    .text-page h1 { margin: 0 0 2rem; font-size: clamp(2.4rem, 7vw, 5.8rem); font-weight: 400; letter-spacing: -.04em; line-height: .98; }
+    .text-page p { margin: 0 0 1.4rem; }
+    footer { width: 90%; min-height: 100px; margin: 12vh auto 0; padding: 1rem 0; display: flex; justify-content: flex-end; align-items: flex-end; font-size: 10px; }
+    @media (max-width: 700px) {
+      .main-header { align-items: flex-start; }
+      nav { width: auto; min-height: 0; flex-wrap: wrap; justify-content: flex-end; }
+      .projects-menu__dropdown { right: 0; left: auto; transform: none; }
+      main { margin-top: 5vh; }
+      .home-photo { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <a class="site-name" href="#home" data-view-link="home">Zekő Sebesy</a>
+    <nav aria-label="Primary navigation">
+      <details class="projects-menu">
+        <summary>Projects</summary>
+        <div class="projects-menu__dropdown">
+          <a href="https://zekoe.github.io/ghpage/conductor.html" target="_blank" rel="noopener">Conductor</a>
+          <a href="https://zekoe.github.io/ghpage/composer.html" target="_blank" rel="noopener">Composer</a>
+        </div>
+      </details>
+      <a href="#bio" data-view-link="bio">Bio</a>
+      <a href="#contact" data-view-link="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view" data-view="home">
+      <img class="home-photo" src="https://zekoe.github.io/ghpage/assets/SCS07871.JPG" alt="Portrait of Zekő Sebesy">
+      <p class="roles">Conductor · Trumpeter · Composer</p>
+      <p class="photo-credit">Photo: Csanád Sebesy</p>
+    </section>
+
+    <section class="view text-page" data-view="bio" hidden>
+      <h1>Bio</h1>
+      <p>Zekő Attila Sebesy, born in Szentes in 1997, is a Hungarian conductor, trumpeter and composer. After studying trumpet at the University of Music and Performing Arts Mannheim and Mozarteum University Salzburg, he is currently pursuing a master’s degree in wind orchestra conducting under Karen Ní Bhroin.</p>
+      <p>Since 2023, Sebesy has served as music director of the Stadtkapelle Bad Reichenhall. He has received further artistic guidance in masterclasses with Christian Thielemann, Timothy Redmond and László Marosi. In June 2026, he appeared as a conductor in a performance of Vid Ožbolt’s newly composed opera <em>Agamemnon</em> at Mozarteum University Salzburg.</p>
+      <p>As a composer, Sebesy writes for contemporary music ensembles, wind orchestras and interdisciplinary projects. His works have been performed in Austria, Germany and Hungary.</p>
+    </section>
+
+    <section class="view text-page" data-view="contact" hidden>
+      <h1>Contact</h1>
+      <p>zeko.sebesy(et)gmail.com</p>
+    </section>
+  </main>
+
+  <footer>© Zekő Sebesy</footer>
+
+  <script>
+    const showView = () => {
+      const requested = location.hash.slice(1);
+      const view = ["home", "bio", "contact"].includes(requested) ? requested : "home";
+      document.querySelectorAll("[data-view]").forEach((section) => {
+        section.hidden = section.dataset.view !== view;
+      });
+      document.querySelectorAll("[data-view-link]").forEach((link) => {
+        if (link.dataset.viewLink === view) link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+      });
+    };
+    window.addEventListener("hashchange", showView);
+    showView();
+  </script>
+</body>
+</html>
