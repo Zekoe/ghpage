@@ -66,6 +66,12 @@ a:visited {
   white-space: nowrap;
 }
 
+/* Temporarily hidden until the trumpet portfolio is ready. */
+.projects-menu__dropdown a[href*="trumpet-player"],
+.category-list a[href*="trumpet-player"] {
+  display: none;
+}
+
 .projects-menu__dropdown a:hover,
 .projects-menu__dropdown a:focus-visible {
   color: #fff !important;
