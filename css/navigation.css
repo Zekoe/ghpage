@@ -32,7 +32,9 @@ body * {
 .main_header nav > a.active:link,
 .main_header nav > a.active:visited,
 .main_header NAV > a.active:link,
-.main_header NAV > a.active:visited {
+.main_header NAV > a.active:visited,
+.main_header nav > a[style*="font-weight: bold"],
+.main_header NAV > a[style*="font-weight: bold"] {
   color: #fff;
   background: #000;
   font-weight: 500;
@@ -60,4 +62,11 @@ body * {
   .main_header NAV > a {
     padding: 8px 10px;
   }
+}
+
+.main_header nav > a[style*="font-weight: bold"],
+.main_header NAV > a[style*="font-weight: bold"] {
+  color: #fff !important;
+  background: #000;
+  text-decoration: none !important;
 }
