@@ -70,3 +70,14 @@ body * {
   background: #000;
   text-decoration: none !important;
 }
+
+/* Definitive current-page state across all legacy page styles. */
+.main_header nav > a[aria-current="page"],
+.main_header NAV > a[aria-current="page"],
+.main_header nav > a.active,
+.main_header NAV > a.active {
+  color: #fff !important;
+  background-color: #000 !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
